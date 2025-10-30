@@ -1,3 +1,6 @@
 [submodule "themes/hugo-saasify-theme"]
 	path = themes/hugo-saasify-theme
 	url = https://github.com/chaoming/hugo-saasify-theme.git
+[submodule "themes/bigspring-light"]
+	path = themes/bigspring-light
+	url = https://github.com/gethugothemes/bigspring-light-hugo.git
