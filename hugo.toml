@@ -1,5 +1,5 @@
 baseURL = "/"
-title = "Professional SaaS Solution - Matthew Jamison Portfolio Demo"
+title = "SaaS Demo"
 defaultContentLanguage = "en"
 
 # Theme Config
@@ -21,42 +21,29 @@ paginate = 6
 paginatePath = "page"
 
 [params]
-  description = ""
-  author = "Chaoming Li"
+  description = "Modern SaaS Platform Demo - Showcasing professional web development with Hugo, TailwindCSS, and modern design patterns. Built by Matthew Jamison."
+  author = "Matthew Jamison"
   logo = "/images/logo.svg"
-  # Google Analytics ID (e.g., "G-XXXXXXXXXX")
-  # googleAnalytics = "G-XXXXXXXXXX"
-  
+
   # Global CTA Configuration
   [params.cta]
     enable = true
-    title = "Ready to Build Your SaaS Website?"
-    description = "Join companies already using our theme to create beautiful, high-performance websites."
+    title = "View More Portfolio Projects"
+    description = "This is a demonstration site showcasing modern SaaS design patterns and web development capabilities."
     gradient_from = "#2563eb"  # Indigo-600
     gradient_to = "#7c3aed"    # Purple-600
     gradient_angle = 30
     [params.cta.primary_button]
-      text = "Get Started Free"
-      url = "/get-started"
+      text = "View Portfolio"
+      url = "https://github.com/MatthewJamisonJS"
     [params.cta.secondary_button]
-      text = "Book Demo"
-      url = "/demo"
-  
+      text = "View Source Code"
+      url = "https://github.com/MatthewJamisonJS/demo-saas"
+
   # Social Media Links
   [params.social]
-    linkedin = "https://linkedin.com/in/chaomingli"
-    twitter = "https://twitter.com/lichaoming"
-    bluesky = "https://bsky.app/profile/bsky.app"
-    youtube = "https://youtube.com/@chaomingli"
-    facebook = "https://facebook.com/lichaoming"
-    instagram = "https://instagram.com/lichaoming"
-    github = "https://github.com/chaoming"
-    telegram = "https://t.me/yourchannel"
-    discord = "https://discord.gg/yourinvite"
-    slack = "https://yourteam.slack.com"
-    medium = "https://medium.com/@yourhandle"
-    dribbble = "https://dribbble.com/yourprofile"
-    behance = "https://behance.net/yourprofile"
+    linkedin = "https://www.linkedin.com/in/matthew-jamison-65486bab/"
+    github = "https://github.com/MatthewJamisonJS"
   
   # Footer Configuration
   [params.footer]
