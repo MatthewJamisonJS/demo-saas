@@ -3,6 +3,7 @@ title: "Pump-up the team morale and celebrate the excellence"
 date: 2020-07-18T10:07:21+06:00
 # post image
 image: "images/blog/post-2.jpg"
+image_alt: "Team celebrating excellence and morale"
 # author
 author: "Joseph Gonzalez"
 # post type (regular/featured)

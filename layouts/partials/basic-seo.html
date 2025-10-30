@@ -1,0 +1,37 @@
+<!-- Open Graph meta tags -->
+<meta property="og:title" content="{{ .Title | default site.Title }}" />
+<meta property="og:description" content="{{ .Summary | default .Description | default site.Params.description | truncate 160 }}" />
+<meta property="og:type" content="{{ if .IsHome }}website{{ else }}article{{ end }}" />
+<meta property="og:url" content="{{ .Permalink }}" />
+{{ with .Params.image }}
+<meta property="og:image" content="{{ . | absURL }}" />
+<meta property="og:image:alt" content="{{ $.Title }}" />
+{{ end }}
+
+<!-- Twitter Card meta tags -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="{{ .Title | default site.Title }}" />
+<meta name="twitter:description" content="{{ .Summary | default .Description | default site.Params.description | truncate 160 }}" />
+{{ with .Params.image }}
+<meta name="twitter:image" content="{{ . | absURL }}" />
+{{ end }}
+{{ with site.Params.twitter }}
+<meta name="twitter:site" content="@{{ . }}" />
+{{ end }}
+
+<!-- Canonical URL -->
+<link rel="canonical" href="{{ .Permalink }}" />
+
+<!-- Additional SEO meta tags -->
+<meta name="description" content="{{ .Summary | default .Description | default site.Params.description | truncate 160 }}" />
+{{ with .Params.keywords }}
+<meta name="keywords" content="{{ . }}" />
+{{ end }}
+
+<!-- Mobile web app meta tags -->
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="{{ site.Title }}" />
+
+<!-- Additional security and usability headers -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />

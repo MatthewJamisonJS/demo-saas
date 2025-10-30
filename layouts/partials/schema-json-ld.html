@@ -1,0 +1,106 @@
+{{ if .IsHome }}
+<!-- Schema.org Website markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "{{ site.Title }}",
+  "url": "{{ site.BaseURL }}",
+  "description": "{{ site.Params.description }}",
+  {{ with site.Params.image }}"image": "{{ . | absURL }}",{{ end }}
+  "inLanguage": "{{ site.LanguageCode | default "en-US" }}",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "{{ site.BaseURL }}?s={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+<!-- Schema.org Organization markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "{{ site.Title }}",
+  "url": "{{ site.BaseURL }}",
+  "logo": "{{ site.BaseURL }}images/logo.png",
+  "description": "{{ site.Params.description }}",
+  {{ with site.Params.twitter }}"sameAs": [
+    "https://twitter.com/{{ . }}"
+  ]{{ end }}
+}
+</script>
+
+{{ else if eq .Type "blog" }}
+<!-- Schema.org BlogPosting markup for blog articles -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "{{ .Title }}",
+  "description": "{{ .Summary | default .Description | truncate 160 }}",
+  "image": "{{ with .Params.image }}{{ . | absURL }}{{ else }}{{ site.BaseURL }}images/logo.png{{ end }}",
+  "datePublished": "{{ .PublishDate.Format "2006-01-02T15:04:05Z07:00" }}",
+  "dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}",
+  "author": {
+    "@type": "Person",
+    "name": "{{ site.Title }}"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "{{ site.Title }}",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ site.BaseURL }}images/logo.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ .Permalink }}"
+  }
+}
+</script>
+
+{{ else if eq .Type "pricing" }}
+<!-- Schema.org SoftwareApplication markup for SaaS -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "{{ site.Title }}",
+  "description": "{{ site.Params.description }}",
+  "url": "{{ site.BaseURL }}",
+  "applicationCategory": "BusinessApplication",
+  {{ with site.Params.image }}"image": "{{ . | absURL }}",{{ end }}
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "url": "{{ .Permalink }}"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "reviewCount": "1"
+  }
+}
+</script>
+
+{{ else }}
+<!-- Schema.org WebPage markup for other pages -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "{{ .Title }}",
+  "url": "{{ .Permalink }}",
+  "description": "{{ .Summary | default .Description | truncate 160 }}",
+  "inLanguage": "{{ site.LanguageCode | default "en-US" }}"
+}
+</script>
+
+{{ end }}

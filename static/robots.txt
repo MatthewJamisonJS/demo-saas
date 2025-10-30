@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /.git/
+Disallow: /.jj/
+Sitemap: https://demo-saas.pages.dev/sitemap.xml

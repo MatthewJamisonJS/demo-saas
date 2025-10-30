@@ -3,6 +3,7 @@ title: "How and why we decided to launch an EMI scheme for our employees"
 date: 2021-02-18T10:07:21+06:00
 # post image
 image: "images/blog/post-3.jpg"
+image_alt: "Employee benefit and EMI scheme discussion"
 # author
 author: ""
 # post type (regular/featured)

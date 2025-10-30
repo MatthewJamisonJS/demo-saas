@@ -1,0 +1,28 @@
+# CODEOWNERS file for demo-saas repository
+# This file specifies who should be automatically requested for review
+# when changes are made to specific files or directories
+
+# Default owner for all files in the repository
+* @MatthewJamisonJS
+
+# Configuration files
+*.toml @MatthewJamisonJS
+*.yaml @MatthewJamisonJS
+*.yml @MatthewJamisonJS
+
+# Theme and content
+/themes/ @MatthewJamisonJS
+/content/ @MatthewJamisonJS
+/assets/ @MatthewJamisonJS
+/layouts/ @MatthewJamisonJS
+/static/ @MatthewJamisonJS
+
+# Configuration directory
+/config/ @MatthewJamisonJS
+
+# Documentation
+*.md @MatthewJamisonJS
+LICENSE @MatthewJamisonJS
+SECURITY.md @MatthewJamisonJS
+CODE_OF_CONDUCT.md @MatthewJamisonJS
+CHANGELOG.md @MatthewJamisonJS

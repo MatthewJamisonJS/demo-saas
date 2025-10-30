@@ -5,16 +5,70 @@
 
 # OS files
 .DS_Store
+.AppleDouble
+.LSOverride
 Thumbs.db
+*.lnk
 
 # IDE files
 .vscode/
 .idea/
 *.swp
 *.swo
+*~
+.vim
+.DS_Store
 
 # Node modules (if using npm/postcss)
 node_modules/
+npm-debug.log
+yarn-error.log
 
 # Hugo stats
 hugo_stats.json
+
+# Environment files
+.env
+.env.local
+*.env.*.local
+.env.*.local
+
+# Git
+.git
+.gitmodules
+.jj
+
+# Temporary files
+*.tmp
+*.temp
+*-backup*
+
+# Cache
+.cache
+.vuepress/dist
+
+# Build artifacts
+*.o
+*.a
+*.so
+dist/
+build/
+
+# OS-specific
+._*
+.localized
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+
+# Development
+.DS_Store
+Thumbs.db
+
+# Backup and lock files
+*.bak
+*.swp
+*.swo
+*~
+.lock
+Gemfile.lock
